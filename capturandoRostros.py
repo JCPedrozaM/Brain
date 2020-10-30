@@ -2,8 +2,8 @@ import cv2
 import os
 import imutils
 
-personName = "Con cubrebocas"
-dataPath = "Data" #Cambia a la ruta donde hayas almacenado Data
+personName = "Sin cubrebocas2"
+dataPath = "Brain\Data" #Cambia a la ruta donde hayas almacenado Data
 personPath = dataPath + "/" + personName
 
 if not os.path.exists(personPath):
