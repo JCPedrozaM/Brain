@@ -1,7 +1,7 @@
 import cv2
 import os
 
-dataPath = 'Data' #Cambia a la ruta donde hayas almacenado Data
+dataPath = 'Brain/Data' #Cambia a la ruta donde hayas almacenado Data
 imagePaths = os.listdir(dataPath)
 print('imagePaths=',imagePaths)
 
