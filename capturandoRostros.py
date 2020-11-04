@@ -1,8 +1,10 @@
 import cv2
 import os
 import imutils
+from datetime import datetime
 
-personName = "Sin cubrebocas2"
+
+personName = "Con cubrebocas"
 dataPath = "Data" #Cambia a la ruta donde hayas almacenado Data
 personPath = dataPath + "/" + personName
 
@@ -30,7 +32,10 @@ while True:
 		cv2.rectangle(frame, (x,y),(x+w,y+h),(0,255,0),2)
 		rostro = auxFrame[y:y+h,x:x+w]
 		rostro = cv2.resize(rostro,(150,150),interpolation=cv2.INTER_CUBIC)
-		cv2.imwrite(personPath + "/rotro_{}.jpg".format(count),rostro)
+		now = datetime.now()
+		print(str(now))
+		now = str(now.day) + "_" + str(now.month) + "_" + str(now.year) + "_" + str(now.hour) + "_" + str(now.minute) + "_" + str(now.second)
+		cv2.imwrite(personPath + "/rotro_"+now+".jpg",rostro)
 		count = count + 1
 	cv2.imshow("frame",frame)
 
