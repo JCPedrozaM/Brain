@@ -33,7 +33,6 @@ while True:
 		rostro = auxFrame[y:y+h,x:x+w]
 		rostro = cv2.resize(rostro,(150,150),interpolation=cv2.INTER_CUBIC)
 		now = datetime.now()
-		print(str(now))
 		now = str(now.day) + "_" + str(now.month) + "_" + str(now.year) + "_" + str(now.hour) + "_" + str(now.minute) + "_" + str(now.second)
 		cv2.imwrite(personPath + "/rotro_"+now+".jpg",rostro)
 		count = count + 1
