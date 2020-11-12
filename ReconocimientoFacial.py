@@ -3,7 +3,7 @@ import os
 
 dataPath = 'Data' #Cambia a la ruta donde hayas almacenado Data
 imagePaths = os.listdir(dataPath)
-print('imagePaths=',imagePaths)
+#print('imagePaths=',imagePaths)
 
 #face_recognizer = cv2.face.EigenFaceRecognizer_create()
 #face_recognizer = cv2.face.FisherFaceRecognizer_create()
@@ -19,7 +19,8 @@ cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
 
 faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
 
-while True:
+while True:	
+
 	ret,frame = cap.read()
 	if ret == False: break
 	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -63,5 +64,9 @@ while True:
 	if k == 27:
 		break
 
+	
+
 cap.release()
 cv2.destroyAllWindows()
+
+
