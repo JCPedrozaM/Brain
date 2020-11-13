@@ -1,5 +1,7 @@
 import tkinter as tk
-import ReconocimientoFacial
+#import ReconocimientoFacial
+import os
+import sys
 
 window=tk.Tk()
 
@@ -24,7 +26,10 @@ frame2=tk.Frame(window,width=450, height=200)
 frame2.pack()
 frame2.config(bg="#FFFFFF")
 
-tk.Button(frame2, text="Comenzar detección",font=("Century Gothic", 12), command=ReconocimientoFacial).place(x=130, y=70)
+def recFacial():
+    os.system('python ReconocimientoFacial.py')
+
+tk.Button(frame2, text="Comenzar detección",font=("Century Gothic", 12), command=recFacial).place(x=130, y=70)
  
 
 window.mainloop()
