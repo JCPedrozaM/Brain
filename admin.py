@@ -36,7 +36,7 @@ def entrenar():
     os.system('python entrenandoRF.py')
 
 tk.Button(frame2, text="Capturar Rostros Con Cubrebocas",font=("Century Gothic", 12), command=captRostrosCon).place(x=130, y=70)
-tk.Button(frame2, text="Capturar Rostros Con Cubrebocas",font=("Century Gothic", 12), command=captRostrosSin).place(x=130, y=140)
+tk.Button(frame2, text="Capturar Rostros Sin Cubrebocas",font=("Century Gothic", 12), command=captRostrosSin).place(x=130, y=140)
 tk.Button(frame2, text="Ejecutar Entrenamiento",font=("Century Gothic", 12), command=entrenar).place(x=130, y=210)
  
 
