@@ -35,9 +35,17 @@ def captRostrosSin():
 def entrenar():
     os.system('python entrenandoRF.py')
 
-tk.Button(frame2, text="Capturar Rostros Con Cubrebocas",font=("Century Gothic", 12), command=captRostrosCon).place(x=130, y=70)
-tk.Button(frame2, text="Capturar Rostros Sin Cubrebocas",font=("Century Gothic", 12), command=captRostrosSin).place(x=130, y=140)
-tk.Button(frame2, text="Ejecutar Entrenamiento",font=("Century Gothic", 12), command=entrenar).place(x=130, y=210)
+con_btn= tk.PhotoImage(file="Botones/conbtn.png")
+con_lbl= tk.Label(image=con_btn)
+btn1= tk.Button(frame2, image=con_btn , command=captRostrosCon, bg="#FFFFFF", borderwidth=0).place(x=30, y=30)
+
+sin_btn= tk.PhotoImage(file="Botones/sinbtn.png")
+sin_lbl= tk.Label(image=sin_btn)
+btn2= tk.Button(frame2, image=sin_btn, command=captRostrosSin, bg="#FFFFFF", borderwidth=0).place(x=130, y=120)
+
+train_btn= tk.PhotoImage(file="Botones/entrenarbtn.png")
+train_lbl= tk.Label(image=train_btn)
+btn3= tk.Button(frame2, image=train_btn, command=entrenar, bg="#FFFFFF", borderwidth=0).place(x=250, y=210)
  
 
 window.mainloop()

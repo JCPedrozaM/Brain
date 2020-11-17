@@ -32,8 +32,13 @@ def recFacial():
 def openAdmin():
     os.system('python admin.py')
 
-tk.Button(frame2, text="Comenzar detección",font=("Century Gothic", 12), command=recFacial).place(x=130, y=70)
-tk.Button(frame2, text="Administración",font=("Century Gothic", 12), command=openAdmin).place(x=130, y=140)
+start_btn= tk.PhotoImage(file="Botones/btncomenzar.png")
+start_lbl= tk.Label(image=start_btn)
+my_btn= tk.Button(frame2, image=start_btn, command=recFacial, borderwidth=0, bg="#FFFFFF").place(x=150, y=20)
+
+admin_btn= tk.PhotoImage(file="Botones/btnadmin.png")
+admin_lbl= tk.Label(image=admin_btn)
+my_btn2= tk.Button(frame2, image=admin_btn, command=openAdmin, borderwidth=0, bg="#FFFFFF").place(x=335, y=145)
  
 
 window.mainloop()
