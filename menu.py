@@ -29,7 +29,11 @@ frame2.config(bg="#FFFFFF")
 def recFacial():
     os.system('python ReconocimientoFacial.py')
 
+def openAdmin():
+    os.system('python admin.py')
+
 tk.Button(frame2, text="Comenzar detección",font=("Century Gothic", 12), command=recFacial).place(x=130, y=70)
+tk.Button(frame2, text="Administración",font=("Century Gothic", 12), command=openAdmin).place(x=130, y=140)
  
 
 window.mainloop()
