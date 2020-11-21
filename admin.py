@@ -35,6 +35,9 @@ def captRostrosSin():
 def entrenar():
     os.system('python entrenandoRF.py')
 
+def atras():
+    os.system('python menu.py')
+
 con_btn= tk.PhotoImage(file="Botones/conbtn.png")
 con_lbl= tk.Label(image=con_btn)
 btn1= tk.Button(frame2, image=con_btn , command=captRostrosCon, bg="#FFFFFF", borderwidth=0).place(x=30, y=30)
@@ -46,6 +49,10 @@ btn2= tk.Button(frame2, image=sin_btn, command=captRostrosSin, bg="#FFFFFF", bor
 train_btn= tk.PhotoImage(file="Botones/entrenarbtn.png")
 train_lbl= tk.Label(image=train_btn)
 btn3= tk.Button(frame2, image=train_btn, command=entrenar, bg="#FFFFFF", borderwidth=0).place(x=250, y=210)
+
+back_btn= tk.PhotoImage(file="Botones/btnatras.png")
+back_lbl= tk.Label(image=back_btn)
+btn4= tk.Button(frame2, image=back_btn, command=atras, bg="#FFFFFF", borderwidth=0).place(x=30, y=220)
  
 
 window.mainloop()

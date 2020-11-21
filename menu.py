@@ -39,6 +39,6 @@ my_btn= tk.Button(frame2, image=start_btn, command=recFacial, borderwidth=0, bg=
 admin_btn= tk.PhotoImage(file="Botones/btnadmin.png")
 admin_lbl= tk.Label(image=admin_btn)
 my_btn2= tk.Button(frame2, image=admin_btn, command=openAdmin, borderwidth=0, bg="#FFFFFF").place(x=335, y=145)
- 
 
+ 
 window.mainloop()
