@@ -30,6 +30,7 @@ def recFacial():
     os.system('python ReconocimientoFacial.py')
 
 def openAdmin():
+    window.destroy()
     os.system('python admin.py')
 
 start_btn= tk.PhotoImage(file="Botones/btncomenzar.png")

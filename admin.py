@@ -36,6 +36,7 @@ def entrenar():
     os.system('python entrenandoRF.py')
 
 def atras():
+    window.destroy()
     os.system('python menu.py')
 
 con_btn= tk.PhotoImage(file="Botones/conbtn.png")
@@ -52,7 +53,7 @@ btn3= tk.Button(frame2, image=train_btn, command=entrenar, bg="#FFFFFF", borderw
 
 back_btn= tk.PhotoImage(file="Botones/btnatras.png")
 back_lbl= tk.Label(image=back_btn)
-btn4= tk.Button(frame2, image=back_btn, command=atras, bg="#FFFFFF", borderwidth=0).place(x=30, y=220)
+btn4= tk.Button(frame2, image=back_btn, command=atras, bg="#FFFFFF", borderwidth=0).place(x=10, y=240)
  
 
 window.mainloop()
