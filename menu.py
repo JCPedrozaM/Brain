@@ -33,6 +33,7 @@ def openAdmin():
     window.destroy()
     os.system('python admin.py')
 
+
 start_btn= tk.PhotoImage(file="Botones/btncomenzar.png")
 start_lbl= tk.Label(image=start_btn)
 my_btn= tk.Button(frame2, image=start_btn, command=recFacial, borderwidth=0, bg="#FFFFFF").place(x=150, y=20)

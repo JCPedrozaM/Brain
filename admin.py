@@ -39,6 +39,9 @@ def atras():
     window.destroy()
     os.system('python menu.py')
 
+def instalarRequerimientos():
+    os.system('pip install -r requirements.txt')
+
 con_btn= tk.PhotoImage(file="Botones/conbtn.png")
 con_lbl= tk.Label(image=con_btn)
 btn1= tk.Button(frame2, image=con_btn , command=captRostrosCon, bg="#FFFFFF", borderwidth=0).place(x=20, y=30)
@@ -51,9 +54,12 @@ train_btn= tk.PhotoImage(file="Botones/entrenarbtn.png")
 train_lbl= tk.Label(image=train_btn)
 btn3= tk.Button(frame2, image=train_btn, command=entrenar, bg="#FFFFFF", borderwidth=0).place(x=250, y=200)
 
-back_btn= tk.PhotoImage(file="Botones/btnatras.png")
+back_btn= tk.PhotoImage(file="Botones/btnhome.png")
 back_lbl= tk.Label(image=back_btn)
-btn4= tk.Button(frame2, image=back_btn, command=atras, bg="#FFFFFF", borderwidth=0).place(x=10, y=240)
+btn4= tk.Button(frame2, image=back_btn, command=atras, bg="#FFFFFF", borderwidth=0).place(x=40, y=240)
  
+install_btn= tk.PhotoImage(file="Botones/btnrequerimientos.png")
+install_lbl= tk.Label(image=install_btn)
+btn5= tk.Button(frame2, image=install_btn, command=instalarRequerimientos, bg="#FFFFFF", borderwidth=0).place(x=320, y=30)
 
 window.mainloop()
