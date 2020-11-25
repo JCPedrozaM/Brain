@@ -3,6 +3,7 @@ import os
 
 dataPath = 'Data' #Cambia a la ruta donde hayas almacenado Data
 imagePaths = os.listdir(dataPath)
+print(imagePaths)
 
 face_recognizer = cv2.face.LBPHFaceRecognizer_create()
 
@@ -31,7 +32,7 @@ while True:
 		cv2.putText(frame,'{}'.format(result),(x,y-5),1,1.3,(255,255,0),1,cv2.LINE_AA)
 		
 		# LBPHFace
-		if result[1] > 65:
+		if result[0] ==0:
 			cv2.putText(frame,'{}'.format(imagePaths[result[0]]),(x,y-25),2,1.1,(0,255,0),1,cv2.LINE_AA)
 			cv2.rectangle(frame, (x,y),(x+w,y+h),(0,255,0),2)
 		else:
