@@ -34,9 +34,9 @@ while True:
 		rostro = cv2.resize(rostro,(150,150),interpolation=cv2.INTER_CUBIC)
 		now = datetime.now()
 		now = str(now.day) + "_" + str(now.month) + "_" + str(now.year) + "_" + str(now.hour) + "_" + str(now.minute) + "_" + str(now.second)
-		cv2.imwrite(personPath + "/rotro_"+now+".jpg",rostro)
+		cv2.imwrite(personPath + "/rostro_"+now+".jpg",rostro)
 		count = count + 1
-	cv2.imshow("frame",frame)
+	cv2.imshow("Captura rostros con cubrebocas",frame)
 
 	k =  cv2.waitKey(1)
 	if k == 27 or count >= 300:
