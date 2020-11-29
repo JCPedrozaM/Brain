@@ -1,5 +1,4 @@
 import tkinter as tk
-#import ReconocimientoFacial
 import os
 import sys
 

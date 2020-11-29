@@ -15,7 +15,7 @@ cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
 
 faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
 
-print("Iniciando video..")
+##os.system('python loadingVideo.py')
 
 while True:	
 	ret,frame = cap.read()
