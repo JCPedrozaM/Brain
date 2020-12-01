@@ -1,20 +1,25 @@
 import cv2
 import os
 
-dataPath = 'Data' #Cambia a la ruta donde hayas almacenado Data
-imagePaths = os.listdir(dataPath)
-print(imagePaths)
+#PROGRAMA PARA DETECCIÓN DE CUBREBOCAS
 
+dataPath = 'Data' #Carpeta en donde se almacenan las imagenes de la BD
+imagePaths = os.listdir(dataPath)
+#print(imagePaths)
+
+#Método de OpenCV para reconocimeinto de rostros
 face_recognizer = cv2.face.LBPHFaceRecognizer_create()
 
-# Leyendo el modelo
+# Lectura del modelo donde se almacenan las etiquetas
 face_recognizer.read('modeloLBPHFace.xml')
 
+#Captura de la cámara web
 cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
-#cap = cv2.VideoCapture('Video.mp4')
 
+#Método de OpenCV para la detección de objetos en video
 faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
 
+#Detección de rostro
 while True:	
 	ret,frame = cap.read()
 	if ret == False: break
@@ -30,7 +35,7 @@ while True:
 
 		cv2.putText(frame,'{}'.format(result),(x,y-5),1,1.3,(255,255,0),1,cv2.LINE_AA)
 		
-		# LBPHFace
+		#Se comparan las etiquetas del xml para saber de que clase se trata
 		if result[0] ==0:
 			cv2.putText(frame,'{}'.format(imagePaths[result[0]]),(x,y-25),2,1.1,(0,255,0),1,cv2.LINE_AA)
 			cv2.rectangle(frame, (x,y),(x+w,y+h),(0,255,0),2)
